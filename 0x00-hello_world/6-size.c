@@ -14,4 +14,4 @@ int main(void)
 	printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
 
 	return (0);
-
+}
