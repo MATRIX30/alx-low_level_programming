@@ -10,7 +10,7 @@ int main(void)
 
 	while (i < 26)
 	{
-		if ((x != 'q') || (x != 'e'))
+		if ((x != 'q') && (x != 'e'))
 		{
 			putchar(x);
 		}
