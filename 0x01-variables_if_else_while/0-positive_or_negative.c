@@ -9,7 +9,7 @@
 
 /**
  * main - Entry poing
- * return: exit poing
+ * Return: exit poing
  */
 
 int main(void)
