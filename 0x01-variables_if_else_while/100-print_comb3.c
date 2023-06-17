@@ -3,27 +3,34 @@
  * main - entry point
  * Return: exit poing
  */
+int main(void)
+{
+	int i = 48;
+	int j = 48;
+	int x = 0;
 
-int main(void) {
-    int i = 0;
+	while (i < 58)
+	{
+		while (j < 58)
+		{
+			if ((i != j) && (i < j))
+			{
+				if (x == 0)
+				{
+					putchar(i);
+					putchar(j);
+					x = 5;
+				}
 
-    while (i < 100) {
-        int j = i + 1;
-
-        while (j < 100) {
-            putchar(i / 10 + '0');
-            putchar(i % 10 + '0');
-            putchar(',');
-            putchar(' ');
-            putchar(j / 10 + '0');
-            putchar(j % 10 + '0');
-            if (i != 98) {
-                putchar(',');
-                putchar(' ');
-            }
-            j++;
-        }
-        i++;
-    }
-    return (0);
+				putchar(',');
+				putchar(' ');
+				putchar(i);
+				putchar(j);
+			}
+			j++;
+		}
+		j = 48;
+		i++;
+	}
+	return (0);
 }
