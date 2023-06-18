@@ -1,13 +1,14 @@
 #include <stdio.h>
+
 /**
  * main - entry point
- * Return: exit poing
+ * Return: exit point with 0 if successful
  */
+
 int main(void)
 {
 	int i = 48;
 	int j = 48;
-	int x = 0;
 
 	while (i < 58)
 	{
@@ -15,17 +16,17 @@ int main(void)
 		{
 			if ((i != j) && (i < j))
 			{
-				if (x == 0)
-				{
-					putchar(i);
-					putchar(j);
-					x = 5;
-				}
-
-				putchar(',');
-				putchar(' ');
 				putchar(i);
 				putchar(j);
+				if ((i == 56) && (j == 57))
+				{
+					putchar(' ');
+				}
+				else
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			j++;
 		}
