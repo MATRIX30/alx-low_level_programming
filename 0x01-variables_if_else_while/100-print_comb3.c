@@ -20,7 +20,7 @@ int main(void)
 				putchar(j);
 				if ((i == 56) && (j == 57))
 				{
-					putchar(' ');
+					putchar('\n');
 				}
 				else
 				{
