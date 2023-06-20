@@ -1,4 +1,4 @@
-#include "main.h"
+i#include "main.h"
 /**
 * print_last_digit - prints the last digit fo c
 * @c: the int value for which we ant to print its last digit
@@ -7,7 +7,9 @@
 
 int print_last_digit(int c)
 {
-	int absc = 0;
+	int absc;
+	int rem;
+	int base;
 
 	if (c >= 0)
 	{
@@ -17,8 +19,8 @@ int print_last_digit(int c)
 	{
 		absc = -1 * c;
 	}
-	int rem = absc % 10;
-	int base = 48;
+	rem = absc % 10;
+	base = 48;
 
 	base += rem;
 	_putchar(base);
