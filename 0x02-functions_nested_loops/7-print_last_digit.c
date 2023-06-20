@@ -7,7 +7,16 @@
 
 int print_last_digit(int c)
 {
-	int absc = _abs(c);
+	int absc;
+
+	if (c >= 0)
+	{
+		absc = c;
+	}
+	else
+	{
+		absc = -1 * c;
+	}
 	int rem = absc % 10;
 	int base = 48;
 
