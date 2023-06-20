@@ -1,14 +1,23 @@
 #include "main.h"
 /**
-* print_alphabet_x10 - This function prints the alphabet in small letters 10 times
-*Return: 0 for SUCCESS
+* print_alphabet_x10 - This function
+* prints the alphabet in small letters 10 times
+* Return: 0 for SUCCESS
 */
 void print_alphabet_x10(void)
 {
-	int i = 0;
-	for (i = 0; i < 10; i++)
+	int i = 97;
+	int j = 0;
+
+	while (j < 10)
+	{
+		while (i <= 122)
 		{
-			print_alphabet();
+			_putchar(i);
+			i++;
 		}
+		i = 97;
 		_putchar('\n');
+		j++;
+	}
 }
