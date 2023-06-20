@@ -7,8 +7,8 @@
 
 int print_last_digit(int c)
 {
-	int c = _abs(c);
-	int rem = c % 10;
+	int absc = _abs(c);
+	int rem = absc % 10;
 	int base = 48;
 
 	base += rem;
