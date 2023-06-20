@@ -12,5 +12,5 @@ int print_last_digit(int c)
 
 	base += rem;
 	_putchar(base);
-	return (base);
+	return (rem);
 }
