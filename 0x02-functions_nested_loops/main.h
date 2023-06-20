@@ -1,4 +1,4 @@
-#ifndef main
-#define main
-int _putchar(void);
+#ifndef HEADER_FILE
+#define HEADER_FILE
+int _putchar(char c);
 #endif

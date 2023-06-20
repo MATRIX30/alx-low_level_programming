@@ -1,13 +1,19 @@
 #include "main.h"
 /**
-* main - entry point to program
-* Return: returns a value of 0 iff program runs successfully
+* main - entry point
+* Return: 0 success
 */
-
-int _putchar(void);
-
-void main(void)
+int main(void)
 {
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
 
