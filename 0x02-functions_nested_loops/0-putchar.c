@@ -4,7 +4,7 @@
 * Return: returns a value of 0 iff program runs successfully
 */
 
-int main(void)
+int main()
 {
 	void _putchar(void);
 	return (0);
