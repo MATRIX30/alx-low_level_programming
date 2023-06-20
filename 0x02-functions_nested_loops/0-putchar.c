@@ -4,5 +4,10 @@
 * Return: returns a value of 0 iff program runs successfully
 */
 
-void _putchar(void);
-return (0);
+int main(void)
+{
+	void _putchar(void);
+	return (0);
+}
+
+
