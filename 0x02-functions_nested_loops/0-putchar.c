@@ -4,4 +4,4 @@
 * Return: returns a value of 0 iff program runs successfully
 */
 
-_putchar();
+void _putchar(void);
