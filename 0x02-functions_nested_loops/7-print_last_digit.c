@@ -15,6 +15,10 @@ int print_last_digit(int c)
 	{
 		absc = c;
 	}
+	else if (c == INT_MIN)
+	{
+		absc = 88;
+	}
 	else
 	{
 		absc = -1 * c;
