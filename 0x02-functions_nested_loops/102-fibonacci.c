@@ -5,9 +5,9 @@
 * Return: fib of n
 */
 
-int fib(int n)
+long fib(int n)
 {
-	double res;
+	long res;
 
 	if ((n == 1) || (n == 2))
 	{
@@ -35,11 +35,11 @@ int main(void)
 	{
 		if (i == 50)
 		{
-			printf("%d\n", fib(i));
+			printf("%ld\n", fib(i));
 		}
 		else
 		{
-			printf("%d, ", fib(i));
+			printf("%ld, ", fib(i));
 		}
 	}
 	printf("\n");
