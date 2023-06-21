@@ -1,13 +1,13 @@
-#include <stdio.h>
+i#include <stdio.h>
 /**
 * fib - function to calculate fibonacci
 * @n: the number
 * Return: fib of n
 */
 
-double fib(int n)
+long fib(int n)
 {
-	double res;
+	long res;
 
 	if ((n == 1) || (n == 2))
 	{
