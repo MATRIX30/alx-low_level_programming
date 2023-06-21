@@ -23,16 +23,18 @@ void times_table(void)
 				tent = (res - unit) / 10;
 				_putchar(tent + base);
 				_putchar(unit + base);
+				_putchar(',');
 			}
 			else
 			{
 				res += base;
 				unit = res;
 				_putchar(unit);
+				_putchar(',');
+				_putchar(' ');
 			}
 			if (j != 9)
 			{
-				_putchar(',');
 				_putchar(' ');
 			}
 		}
