@@ -1,4 +1,4 @@
-i#include <stdio.h>
+#include <stdio.h>
 /**
 * fib - function to calculate fibonacci
 * @n: the number
