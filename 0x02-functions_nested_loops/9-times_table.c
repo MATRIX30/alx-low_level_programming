@@ -19,23 +19,27 @@ void times_table(void)
 			res = i * j;
 			if (res > 9)
 			{
+				if (j > 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 				unit = res % 10;
 				tent = (res - unit) / 10;
 				_putchar(tent + base);
 				_putchar(unit + base);
-				_putchar(',');
 			}
 			else
 			{
+				if (j > 0)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
 				res += base;
 				unit = res;
 				_putchar(unit);
-				_putchar(',');
-				_putchar(' ');
-			}
-			if (j != 9)
-			{
-				_putchar(' ');
 			}
 		}
 		_putchar('\n');
