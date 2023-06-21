@@ -30,6 +30,7 @@ long fib(int n)
 int main(void)
 {
 	long term = 0;
+	int i = 0;
 
 	for (i = 1; i <= 33; i++)
 	{
