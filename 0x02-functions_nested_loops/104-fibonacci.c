@@ -29,8 +29,6 @@ double fib(int n)
 
 int main(void)
 {
-	double res = 0;
-
-	printf("%ld", fib(98)); 
+	printf("%ld", fib(98));
 	return (0);
 }
