@@ -7,7 +7,7 @@
 
 int fib(int n)
 {
-	long long res;
+	double res;
 
 	if ((n == 1) || (n == 2))
 	{
