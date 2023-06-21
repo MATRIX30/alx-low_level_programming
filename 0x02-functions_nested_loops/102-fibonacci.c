@@ -33,7 +33,14 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%d, ", fib(i));
+		if (i == 50)
+		{
+			printf("%d\n", fib(i));
+		}
+		else
+		{
+			printf("%d, ", fib(i));
+		}
 	}
 	printf("\n");
 	return (0);
