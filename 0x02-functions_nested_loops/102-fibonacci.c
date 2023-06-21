@@ -7,7 +7,7 @@
 
 int fib(int n)
 {
-	int res;
+	long res;
 
 	if ((n == 1) || (n == 2))
 	{
@@ -30,9 +30,10 @@ int fib(int n)
 int main(void)
 {
 	int i = 1;
+
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%d, ",fib(i));
+		printf("%d, ", fib(i));
 	}
 	printf("\n");
 	return (0);
