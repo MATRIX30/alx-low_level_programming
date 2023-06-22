@@ -26,14 +26,6 @@ void more_numbers(void)
 			}
 			j++;
 		}
-		if (i != 9)
-		{
-			_putchar(' ');
-			_putchar('\n');
-		}
-		else
-		{
-			_putchar('\n');
-		}
+		_putchar('\n');
 	}
 }
