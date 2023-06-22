@@ -25,7 +25,7 @@ void print_times_table(int n)
 		{
 			res = i * j;
 			unit = res % 10;
-			tent = (res - unit) / 10;
+			tent = ((res - unit)  / 10) % 10;
 			hund = (res - (tent * 10)) / 100;
 			if (res > 99)
 			{
@@ -58,7 +58,7 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				_putchar(unit += base);
+				_putchar(unit + base);
 			}
 		}
 		_putchar('\n');
