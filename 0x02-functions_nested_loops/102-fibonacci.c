@@ -5,23 +5,24 @@
 * Return: fib of n
 */
 
-long fib(int n)
+void fib50(void)
 {
-	long res;
+	long long n1 = 1;
+	long long n2 = 2;
+	long long sum = n1 + n2;
+	int i = 0;
 
-	if ((n == 1) || (n == 2))
+	printf("%lld, ", n1);
+	printf("%lld, ", n2);
+	while (i < 50 - 2)
 	{
-		res = n;
-		return (res);
-	}
-	else
-	{
-		res = fib(n - 1) + fib(n - 2);
-		return (res);
+		printf("%lld, ", sum);
+		n1 = n2;
+		n2 = sum;
+		sum = n2 + n1;
+		i++;
 	}
 }
-
-
 /**
 * main - entry piont
 * Return: 0 on success
@@ -29,19 +30,6 @@ long fib(int n)
 
 int main(void)
 {
-	int i = 1;
-
-	for (i = 1; i <= 50; i++)
-	{
-		if (i == 50)
-		{
-			printf("%ld\n", fib(i));
-		}
-		else
-		{
-			printf("%ld, ", fib(i));
-		}
-	}
-	printf("\n");
+	fib50();
 	return (0);
 }
