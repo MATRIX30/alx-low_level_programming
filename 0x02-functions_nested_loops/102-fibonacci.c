@@ -27,6 +27,7 @@ void fib50(void)
 		sum = n2 + n1;
 		i++;
 	}
+	putchar('\n');
 }
 /**
 * main - entry piont
