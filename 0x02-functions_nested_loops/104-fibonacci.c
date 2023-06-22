@@ -1,27 +1,34 @@
 #include <stdio.h>
 /**
-* fib - function to calculate fibonacci
-* @n: the number
-* Return: fib of n
+* fib98 - function to calculate fibonacci
 */
 
-long fib(int n)
+void fib98(void)
 {
-	long res;
+	unsigned long n1 = 1;
+	unsigned long n2 = 2;
+	unsigned long sum = n1 + n2;
+	int i = 0;
 
-	if ((n == 1) || (n == 2))
+	printf("%lu, ", n1);
+	printf("%lu, ", n2);
+	while (i < 98 - 2)
 	{
-		res = n;
-		return (res);
+		if (i == 95)
+		{
+			printf("%ld", sum);
+		}
+		else
+		{
+			printf("%ld, ", sum);
+		}
+		n1 = n2;
+		n2 = sum;
+		sum = n2 + n1;
+		i++;
 	}
-	else
-	{
-		res = fib(n - 1) + fib(n - 2);
-		return (res);
-	}
+	putchar('\n');
 }
-
-
 /**
 * main - entry piont
 * Return: 0 on success
@@ -29,6 +36,6 @@ long fib(int n)
 
 int main(void)
 {
-	printf("%ld", fib(98));
+	fib98();
 	return (0);
 }
