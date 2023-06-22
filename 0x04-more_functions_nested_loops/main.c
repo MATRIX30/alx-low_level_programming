@@ -3,10 +3,6 @@
 
 int main(void)
 {
-	_putchar('h');
-	_putchar('\n');
-
-	printf("%c: %d\n",'A',_isupper('A'));
-	
+	more_numbers();
 	return (0);
 }
