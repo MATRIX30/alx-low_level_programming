@@ -14,7 +14,7 @@ void fib50(void)
 	printf("%ld, ", n2);
 	while (i < 50 - 2)
 	{
-		if (i == 50 - 2)
+		if (i == 47)
 		{
 			printf("%ld", sum);
 		}
