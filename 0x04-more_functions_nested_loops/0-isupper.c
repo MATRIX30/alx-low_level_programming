@@ -1,4 +1,3 @@
-#include "main.h"
 /**
 * _isupper - returns 1 if its upper case
 * @c: integer value of the character to test
