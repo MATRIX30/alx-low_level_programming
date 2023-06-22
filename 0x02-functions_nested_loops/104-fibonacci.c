@@ -16,11 +16,11 @@ void fib98(void)
 	{
 		if (i == 95)
 		{
-			printf("%ld", sum);
+			printf("%lu", sum);
 		}
 		else
 		{
-			printf("%ld, ", sum);
+			printf("%lu, ", sum);
 		}
 		n1 = n2;
 		n2 = sum;
