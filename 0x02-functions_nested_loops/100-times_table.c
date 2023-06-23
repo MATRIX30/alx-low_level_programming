@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+void print_times_table(int n);
 /**
 * print_times_table - prints out the 9 time table
 * @n: this is the number of times table we wish to create
