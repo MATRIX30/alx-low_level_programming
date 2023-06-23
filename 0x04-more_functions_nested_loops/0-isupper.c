@@ -1,4 +1,3 @@
-#include "main.h"
 /**
 * _isupper - main function
 * @c: param
