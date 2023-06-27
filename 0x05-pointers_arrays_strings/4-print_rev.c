@@ -26,14 +26,10 @@ void print_rev(char *s)
 		}
 	}
 
-	while (count >= 0)
+	while (count > 0)
 	{
 		_putchar(*(s + count));
 		count--;
-
-		if (count == -1)
-		{
-			_putchar('\n');
-		}
 	}
+	_putchar('\n');
 }
