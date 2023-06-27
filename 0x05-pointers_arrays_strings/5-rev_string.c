@@ -12,28 +12,24 @@ void rev_string(char *s)
 
 	count = 0;
 
-	if (s == NULL)
+	/* get length of string */
+	while (*(s + i) != '\0')
 	{
-		count = 0;
-	}
-	else
-	{
-		while (*(s + i) != '\0')
-		{
-			count += 1;
-			i += 1;
-		}
+		count += 1;
+		i += 1;
 	}
 
-	i = 0;
-	char temp[count];
+	int index = count - 1;
+	char temp[count + 1];
 
-	while (count >= 0)
+	temp[count] = '\0';
+	/* storing the reverse string in temp */
+	for (i = 0; i < count; i++)
 	{
-		temp[i] = *(s + count);
-		count--;
-		i++;
+		temp[i] = *(s + index - i);
 	}
-	s = temp;
-	_putchar('\n');
+	for (i = 0; i <= count; i++)
+	{
+		*(s + i) = temp[i];
+	}
 }
