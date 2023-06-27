@@ -9,6 +9,8 @@ void rev_string(char *s)
 {
 	int count;
 	int i = 0;
+	int index;
+	char temp[1000];
 
 	count = 0;
 
@@ -18,11 +20,8 @@ void rev_string(char *s)
 		count += 1;
 		i += 1;
 	}
-
-	int index = count - 1;
+	index = count - 1;
 	/* char temp[count + 1]; */
-	
-	char temp[1000];
 	temp[count] = '\0';
 	/* storing the reverse string in temp */
 	for (i = 0; i < count; i++)
