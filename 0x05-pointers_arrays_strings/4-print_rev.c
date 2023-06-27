@@ -31,7 +31,7 @@ void print_rev(char *s)
 		_putchar(*(s + count));
 		count--;
 
-		if (count == 0)
+		if (count == -1)
 		{
 			_putchar('\n');
 		}
