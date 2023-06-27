@@ -27,11 +27,15 @@ void rev_string(char *s)
 		}
 	}
 
+	i = 0;
+	char temp[count];
+
 	while (count >= 0)
 	{
-		_putchar(*(s + count));
+		temp[i] = *(s + count);
 		count--;
+		i++;
 	}
+	s = temp;
 	_putchar('\n');
-
 }
