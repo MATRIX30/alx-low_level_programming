@@ -12,8 +12,6 @@ void rev_string(char *s)
 
 	count = 0;
 
-	char tmp[] = s;
-
 	if (s == NULL)
 	{
 		count = 0;
