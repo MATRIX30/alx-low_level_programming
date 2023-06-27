@@ -30,7 +30,10 @@ void print_rev(char *s)
 	{
 		_putchar(*(s + count));
 		count--;
-	}
-	
 
+		if (count == 0)
+		{
+			_putchar('\n');
+		}
+	}
 }
