@@ -49,6 +49,7 @@ char *cap_string(char *v)
 				sep = 1;
 				break;
 			case '\t':
+				*(v + i) = ' ';
 				sep = 1;
 				break;
 			case ' ':
