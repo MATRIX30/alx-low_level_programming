@@ -8,31 +8,18 @@
 char *leet(char *v)
 {
 	int i;
+	int j;
+	char text[] = "aAeEoOtTlL";
+	char code[] = "4433007711";
 
 	for (i = 0; *(v + i) != '\0'; i++)
 	{
-		if (*(v + i) == 'a' || *(v + i) == 'A')
+		for (j = 0; text[j] != '\0'; j++)
 		{
-			*(v + i) = '4';
-		}
-		else if (*(v + i) == 'e' || *(v + i) == 'E')
-		{
-			*(v + i) = '3';
-		}
-		else if (*(v + i) == 'o' || *(v + i) == 'O')
-		{
-			*(v + i) = '0';
-		}
-		else if (*(v + i) == 't' || *(v + i) == 'T')
-		{
-			*(v + i) = '7';
-		}
-		else if (*(v + i) == 'l' || *(v + i) == 'L')
-		{
-			*(v + i) = '1';
-		}
-		else
-		{
+			if (*(v + i) == text[j])
+			{
+				*(v + i) = code[j];
+			}
 		}
 	}
 	return (v);
