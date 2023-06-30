@@ -1,12 +1,10 @@
 #include "main.h"
-char *cap_string(char *v);
 /**
 * cap_string - main function
-* v: param
+* @v: param
 * Return: capitlized v
 */
-
-
+char *cap_string(char *v);
 char *cap_string(char *v)
 {
 	int i;
