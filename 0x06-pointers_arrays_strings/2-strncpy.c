@@ -1,22 +1,18 @@
 #include "main.h"
 
 /**
-* _strncat - concatinates 2 strings up to the nth character
+* _strncpy - concatinates 2 strings up to the nth character
 * @dest: destination param
 * @src: source param
 * @n: number of char param
 * Return: character pointer
 */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i = 0;
 	int j;
 
-	while (*(dest + i))
-	{
-		i++;
-	}
 	if (n == 0)
 	{
 		*(dest + i) = '\0';
@@ -27,9 +23,9 @@ char *_strncat(char *dest, char *src, int n)
 
 	for (j = 0; j < n; j++)
 	{
-		*(dest + i) = *(src + j);
-		i++;
+		*(dest + j) = *(src + j);
 	}
-	*(dest + i) = '\0';
+
+	*(dest + j) = '\0';
 	return (dest);
 }
