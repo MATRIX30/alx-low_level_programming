@@ -11,7 +11,7 @@ int main(void)
     char *s = "good child";
     char *f;
 
-    f = _strchr(s, 'c');
+    f = _strchr(s, '\0');
 
     if (f != NULL)
     {
