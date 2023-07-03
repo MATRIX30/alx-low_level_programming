@@ -8,14 +8,18 @@
  */
 int main(void)
 {
-    char *s = "hello";
+    char *s = "good child";
     char *f;
 
-    f = _strchr(s, 'l');
+    f = _strchr(s, 'c');
 
     if (f != NULL)
     {
         printf("%s\n", f);
+    }
+    else
+    {
+	    printf("It is null");
     }
     return (0);
 }

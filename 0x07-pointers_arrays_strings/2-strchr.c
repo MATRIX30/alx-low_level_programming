@@ -1,5 +1,5 @@
-#include "main.h"
 #include <stddef.h>
+#include "main.h"
 /**
 * _strchr - returns the pionter to the  first occurance of c in s
 * @s: pointer to a string
@@ -15,11 +15,9 @@ char *_strchr(char *s, char c)
 	{
 		if (*(s + i) == c)
 		{
-			return ((s + i));
+			return (&(s + i));
 		}
 		i++;
 	}
 	return (NULL);
-
-
 }
