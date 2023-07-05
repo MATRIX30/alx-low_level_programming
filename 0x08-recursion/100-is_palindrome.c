@@ -16,7 +16,7 @@ int is_palindrome(char *s)
 	}
 	else
 	{
-		char s_cpy[100];
+		char s_cpy[1000];
 
 		strncpy(s_cpy, s + 1, len - 2);
 		s_cpy[len - 2] = '\0';
