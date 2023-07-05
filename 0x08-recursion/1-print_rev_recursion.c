@@ -1,5 +1,7 @@
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
+
 /**
 * _print_rev_recursion - prints strings recursively
 * @s: string param
@@ -12,8 +14,9 @@ void _print_rev_recursion(char *s)
 
 	if (len == 0)
 	{
+		exit(0);
 	}
-	if (len <= 1)
+	if (len == 1)
 	{
 		_putchar(*s);
 	}
