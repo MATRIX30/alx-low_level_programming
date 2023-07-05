@@ -16,6 +16,11 @@ int is_palindrome(char *s)
 	}
 	else
 	{
-		return ((*(s) == *(s + (len - 1))) && (is_palindrome())
+		char s_cpy[100];
+
+		strncpy(s_cpy, s + 1, len - 2);
+		s_cpy[len - 2] = '\0';
+		return ((*(s) == *(s + (len - 1))) && (is_palindrome(s_cpy)));
 	}
 }
+
