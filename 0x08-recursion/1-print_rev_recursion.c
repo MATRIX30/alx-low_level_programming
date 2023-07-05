@@ -10,6 +10,9 @@ void _print_rev_recursion(char *s)
 	int len = strlen(s);
 	char s_cpy[1000];
 
+	if (s == "")
+	{
+	}
 	if (len <= 1)
 	{
 		_putchar(*s);
