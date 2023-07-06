@@ -8,8 +8,8 @@
 */
 int sqrt_helper(int n, int min, int max)
 {
-	unsigned int guess = (min + max) / 2;
-	unsigned int res = guess * guess;
+	int guess = (min + max) / 2;
+	int res = guess * guess;
 
 	if (min > max)
 	{
