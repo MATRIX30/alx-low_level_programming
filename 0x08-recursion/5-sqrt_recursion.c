@@ -21,7 +21,7 @@ int sqrt_helper(int n, int min, int max)
 	}
 	else if (res < n)
 	{
-		return (sqrt_helper(n , guess + 1 , max));
+		return (sqrt_helper(n, guess + 1, max));
 	}
 	else
 	{
@@ -35,5 +35,5 @@ int sqrt_helper(int n, int min, int max)
 */
 int _sqrt_recursion(int n)
 {
-	return(sqrt_helper(n, 1, n));
+	return (sqrt_helper(n, 1, n));
 }
