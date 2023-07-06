@@ -6,27 +6,17 @@
 * @max: max param
 * Return: sqrt of num
 */
-int sqrt_helper(int n, int min, int max)
+int sqrt_helper(int n, int i)
 {
-	int guess = (min + max) / 2;
-	int res = guess * guess;
-
-	if (min > max)
+	if (i * i == n)
+	{
+		return (i);
+	}
+	if (i > n / 2)
 	{
 		return (-1);
 	}
-	if (res == n)
-	{
-		return (guess);
-	}
-	else if (res < n)
-	{
-		return (sqrt_helper(n, guess + 1, max));
-	}
-	else
-	{
-		return (sqrt_helper(n, min, guess - 1));
-	}
+	return (sqrt_helper(n, i + 1));
 }
 /**
 * _sqrt_recursion - main function
@@ -35,5 +25,13 @@ int sqrt_helper(int n, int min, int max)
 */
 int _sqrt_recursion(int n)
 {
-	return (sqrt_helper(n, 1, n));
+	if (n < 1)
+	{
+		return (-1);
+	}
+	if (n == 1)
+	{
+		return (1);
+	}
+	return (sqrt_helper(n, 1));
 }
