@@ -2,8 +2,7 @@
 /**
 * sqrt_helper - helper for sqrt
 * @n: number param
-* @min: min param
-* @max: max param
+* @i: iterator param
 * Return: sqrt of num
 */
 int sqrt_helper(int n, int i)
