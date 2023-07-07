@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
 * main - main entry point into the program
 * @argc: variable holding the number of parameters entered to function
@@ -10,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	int res = 0;
-	int i = argc - 1;
+	int i = 1;
 	int j = 0;
 
 	if (argc == 1)
@@ -18,14 +19,17 @@ int main(int argc, char **argv)
 		printf("0\n");
 		exit(EXIT_SUCCESS);
 	}
-	while (i > 0)
+	while (i < argc)
 	{
-		while (ar)
+		while (argv[i])
 		{
+			if (argv[i] < 48 || argv[i] > 57)
+				{
+
+				}
 		}
-		i--;
+		i++;
 
 	}
 	return (res);
-	exit(EXIT_SUCCESS);
 }
