@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 		}
 		else if (sum == atoi(argv[1]))
 		{
-			printf("%d", count);
+			printf("%d\n", count);
 			exit(EXIT_SUCCESS);
 		}
 		else
