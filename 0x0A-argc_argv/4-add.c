@@ -12,6 +12,7 @@ int main(int argc, char **argv)
 {
 	int res = 0;
 	int i = 1;
+	int j = 0;
 
 	if (argc == 1)
 	{
@@ -20,20 +21,20 @@ int main(int argc, char **argv)
 	}
 	while (i < argc)
 	{
-		while (argv[i])
+		while (*(argv[i] + j) != '\0')
 		{
-			printf("%s -\n",argv[i]);
-			/*printf("%d -\n",*argv[i]); */
-			if (*argv[i] < 48 || *argv[i] > 57)
+			if ((*argv[i] < 48 || *argv[i] > 57) && *argv[i] != 45)
 			{
 				printf("Error\n");
 				return (1);
 			}
-			argv[i]++;
+			j++;
 		}
+		j = 0;
 		res += atoi(argv[i]);
 		i++;
 
 	}
-	return (res);
+	printf("%d\n", res);
+	return (0);
 }
