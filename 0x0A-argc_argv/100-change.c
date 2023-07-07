@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	if (atoi(argv[1]) < 0)
 	{
 		printf("0\n");
-		exit(EXIT_SUCCESS);
+		return (0);
 	}
 	while (i < 5)
 	{
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 		else if (sum == atoi(argv[1]))
 		{
 			printf("%d\n", count);
-			exit(EXIT_SUCCESS);
+			return (0);
 		}
 		else
 		{
