@@ -1,0 +1,1 @@
+This is the readme for this project on argv argc and suppression of unused variables and functions during compilation eg using __attribute__((variable or function name)), #define UNUSED (x) (void)(x) or simple cast the variable to void or compile with the following  gcc flags -Wunused-variables or -Wno-unused
