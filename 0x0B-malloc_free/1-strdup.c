@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 /**
-* _strdp - function that returns a pointer to a newly allocated space
+* _strdup - function that returns a pointer to a newly allocated space
 * @str: size of array
 * Return: Null if size 0 else return pointer to the string str
 */
@@ -14,11 +14,7 @@ char *_strdup(char *str)
 	unsigned int i;
 
 	size = strlen(str);
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	if (size == 0)
+	if (*str == NULL)
 	{
 		return (NULL);
 	}
