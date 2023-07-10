@@ -1,14 +1,29 @@
 #include <stdio.h>
-#include <string.h>
 
-char *_strncat(char *dest, char *src, int n)
+int main(void)
 {
-    int dest_len = strlen(dest);
-    int i;
+  int n;
+  int a[5];
+  int *p;
+  
 
-    for (i = 0 ; i < n && src[i] != '\0' ; i++)
-        dest[dest_len + i] = src[i];
-    dest[dest_len + i] = '\0';
+  a[2] = 1024;
+  p = &n;
+  /*
+   * write your line of code here...
+   * Remember:
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
+   */
+   int i;
+   for (i = 0; i <= 10; i++)
+   {
+	   printf("%d \t",*(p + i));
+   }
 
-    return dest;
+  /* ...so that this prints 98\n */
+ 
+  return (0);
 }
