@@ -27,7 +27,7 @@ char **strtow(char *str)
 	int i, j, k, len;
 	char **words;
 
-	if (str == NULL || str[0] == '\0')
+	if (str == NULL || str[0] == "")
 		return (NULL);
 	words = malloc(sizeof(char *) * (count_words(str) + 1));
 	if (words == NULL)
