@@ -1,54 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
-/**
- * _isdigit - checks if a character is a digit
- * @c: character to check
- *
- * Return: 1 if c is a digit, 0 otherwise
- */
-int _isdigit(char c)
+int main(int argc, char *argv[])
 {
-    return (c >= '0' && c <= '9');
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (98);
+	}
+	for (int i = 1; i < argc; i++)
+	{
+		for (int j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit(argv[i][j]))
+			{
+				printf("Error\n");
+				return (98);
+			}
+		}
+	}
+
+	int num1 = atoi(argv[1]);
+	int num2 = atoi(argv[2]);
+
+	printf("%d\n", num1 * num2);
+	return (0);
 }
-
-/**
- * _atoi - converts a string to an integer
- * @s: string to convert
- *
- * Return: integer value of string
- */
-int _atoi(char *s)
-{
-    int i, n;
-
-    for (i = 0, n = 0; _isdigit(s[i]); i++)
-        n = n * 10 + (s[i] - '0');
-
-    return (n);
-}
-
-/**
- * main - multiplies two positive numbers
- * @argc: number of arguments passed to program
- * @argv: array of arguments passed to program
- *
- * Return: 0 on success, 98 on failure
- */
-int main(int argc, char **argv)
-{
-    int num1, num2;
-
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (98);
-    }
-
-    if (!_isdigit(*argv[1]) || !_isdigit(*argv[2]))
-    {
-        printf("Error\n");
-        return (98);
-    }
-
 
