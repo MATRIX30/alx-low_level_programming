@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <string.h>
+
 /**
 * string_nconcat - function
 * @s1: kdk
@@ -22,7 +25,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (new_str == NULL)
 		return (NULL);
 	for (i = 0; s1[i] != '\0'; i++)
-		new_str[i] = s1[i]
+		new_str[i] = s1[i];
 	for (j = 0; s2[j] != '\0' && j < n; j++)
 		new_str[i + j] = s2[j];
 	new_str[i + j] = '\0';
