@@ -1,43 +1,38 @@
 #include <stdio.h>
+#include "dog.h"
 #include <stdlib.h>
 #include <string.h>
-#include "dog.h"
 /**
- * new_dog - creates a new dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: owner of the dog
- *
- * Return: pointer to the new dog, or NULL if it fails
- */
+* new_dog - main function to create new dog
+* @name: name of the dog
+* @age: age of the new dog
+* @owner: owner of the new dog
+* Return: pointer to new dog
+*/
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
-	char *name_copy;
-	char *owner_copy;
+	char *namecpy;
+	char *ownercpy;
+	dog_t my_new_dog;
+	dog_t *ptr = &my_new_dog;
 
-	new_dog = malloc(sizeof(dog_t));
-	if (new_dog == NULL)
-		return (NULL);
-	name_copy = malloc(strlen(name) + 1);
-	if (name_copy == NULL)
+	namecpy = malloc(strlen(name) + 1);
+	if (namecpy == NULL)
 	{
-		free(new_dog);
 		return (NULL);
 	}
-	strcpy(name_copy, name);
-	owner_copy = malloc(strlen(owner) + 1);
+	strcpy(namecpy, name);
 
-	if (owner_copy == NULL)
+	ownercpy = malloc(strlen(owner) + 1);
+	if (ownercpy == NULL)
 	{
-		free(name_copy);
-		free(new_dog);
 		return (NULL);
 	}
-	strcpy(owner_copy, owner);
-	new_dog->name = name_copy;
-	new_dog->age = age;
-	new_dog->owner = owner_copy;
-	return (new_dog);
+	strcpy(ownercpy, owner);
+
+	ptr->age = age;
+	ptr->name = namecpy;
+	ptr->owner = ownercpy;
+	return (ptr);
 }
-
