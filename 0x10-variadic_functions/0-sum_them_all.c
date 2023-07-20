@@ -13,6 +13,10 @@ int sum_them_all(const unsigned int n, ...)
 	int sum = 0;
 	/* step 1: declare variable of type va_list */
 	va_list list;
+	if (n == 0)
+	{
+		return (0);
+	}
 	/* step 2: create pointer to fist elem of list using va_start */
 	va_start(list, n);
 	/* step 3: iterate over the elements using var_args summing them up */
