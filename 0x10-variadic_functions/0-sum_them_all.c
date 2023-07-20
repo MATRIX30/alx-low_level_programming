@@ -9,14 +9,22 @@
 
 int sum_them_all(const unsigned int n, ...)
 {
-	va_list args;
 	unsigned int i;
 	int sum = 0;
-
-	va_start(args, n);
+	/* step 1: declare variable of type va_list */
+	va_list list;
+	if ( n == 0 || list == NULL)
+	{
+		return (0);
+	}
+	/* step 2: create pointer to fist elem of list using va_start */
+	va_start(list, n);
+	/* step 3: iterate over the elements using var_args summing them up */
 	for (i = 0; i < n; i++)
-		sum += va_arg(args, int);
-	va_end(args);
+	{
+		sum += va_arg(list, int);
+	}
+	/* step 4: terminate with va_end */
+	va_end(list);
 	return (sum);
 }
-
