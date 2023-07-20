@@ -11,7 +11,7 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int i, sum = 0;
 	/* step 1: declare variable of type va_list */
 	va_list list;
-	if ( n == 0)
+	if ( n == 0 || list == NULL)
 	{
 		return (0);
 	}
