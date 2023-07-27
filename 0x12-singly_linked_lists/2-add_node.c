@@ -12,5 +12,23 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
+	list_t *new_node;
+
+	/* creating new node in heep */
+	new_node = malloc(sizeof(list_t));
+	new_node->str = strdup(str);
+	new_node->len = strlen(str);
+
+	if (*head == NULL)
+	{
+		new_node->next = NULL;
+		*head = new_node;
+	}
+	else
+	{
+		new_node->next = *head;
+		*head = new_node;
+	}
+	return (*head);
 
 }
