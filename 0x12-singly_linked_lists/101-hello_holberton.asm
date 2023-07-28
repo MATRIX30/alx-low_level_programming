@@ -1,3 +1,4 @@
+extern printf
 section .data
 	txt db 'Hello, Holberton', 10, 0
 
