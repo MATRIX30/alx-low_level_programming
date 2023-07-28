@@ -41,6 +41,7 @@ int main(void)
     add_node(&head, "Tasneem");
     add_node(&head, "William");
     add_node(&head, "Zee");
+    add_node(NULL, "Marry"); 
     print_list(head);
     return (0);
 }
