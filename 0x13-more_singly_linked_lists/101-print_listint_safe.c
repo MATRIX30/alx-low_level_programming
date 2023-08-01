@@ -13,6 +13,10 @@ size_t print_listint_safe(const listint_t *head)
 	size_t node_count = 0;
 	const listint_t *temp;
 
+	if (head == NULL)
+	{
+		exit(98);
+	}
 	while (head)
 	{
 		printf("[%p] %d\n", (void *)head, head->n);
