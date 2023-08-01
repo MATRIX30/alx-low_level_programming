@@ -1,5 +1,5 @@
-#include "main.h"
-#include <stdlib>
+#include "lists.h"
+#include <stdlib.h>
 /**
 * free_listint_safe - function to free list with loops
 * @h: pointer to the head pointer
@@ -17,11 +17,17 @@ size_t free_listint_safe(listint_t **h)
 	{
 		free(h);
 	}
-	temp = *head;
 	while (temp)
 	{
 		node_count++;
+		temp = *h;
+		*h = (*h)->next;
+		free(temp);
+		if (temp <= *h)
+		{
+			free(*h);
+		}
 	}
-
-	head = NULL;
+	h = NULL;
+	return (node_count);
 }
