@@ -2,11 +2,10 @@
 #include <stdlib.h>
 
 /**
-* insert_nodeint_at_index - function to insert node at position idx
+* delete_nodeint_at_index - function to insert node at position idx
 * @head: pointer to the head of the linked list
-* @idx: index where element should be added
-* @n: element to add 
-* Return: address to the newly added element
+* @index: index where element should be deleted
+* Return: int value of element deleted
 */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
@@ -20,7 +19,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 
 	temp = *head;
-	while(temp)
+	while (temp)
 	{
 		if (index == 0)
 		{
