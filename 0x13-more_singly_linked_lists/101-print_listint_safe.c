@@ -12,8 +12,6 @@ size_t print_listint_safe(const listint_t *head)
 {
 	size_t node_count = 0;
 	const listint_t *temp;
-	if (head == NULL)
-		return (0);
 
 	while (head)
 	{
@@ -28,5 +26,4 @@ size_t print_listint_safe(const listint_t *head)
 		}
 	}
 	return (node_count);
-	
 }
