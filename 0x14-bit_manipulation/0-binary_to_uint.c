@@ -28,12 +28,12 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int sum = 0;
 
 
-	len = get_string_length(b);
-	multi = 1 << (len - 1);
 	if (b == NULL)
 	{
 		return (0);
 	}
+	len = get_string_length(b);
+	multi = 1 << (len - 1);
 
 	while (*b != '\0')
 	{
