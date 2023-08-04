@@ -8,10 +8,11 @@ void print_binary(unsigned long int n)
 {
 	unsigned long int filter;
 	unsigned long int res;
-	int count;
+	unsigned long int count;
 
 	filter = 1;
 	res = 0;
+	count = 0;
 
 	while (n > 0)
 	{
