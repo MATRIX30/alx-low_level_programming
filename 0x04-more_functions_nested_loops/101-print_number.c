@@ -1,19 +1,8 @@
 #include "main.h"
 
 /**
-* int_to_char - convert int to char
+* print_number - convert int to char
 * @n: integer to be converted to char
-* @Return: char representation for n
-*/
-
-char int_to_char(int n)
-{
-	return (n + '0');
-}
-
-/**
-* print_number
-* @n: param
 */
 void print_number(int n)
 {
