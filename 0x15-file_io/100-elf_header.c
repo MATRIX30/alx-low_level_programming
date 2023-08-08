@@ -58,19 +58,19 @@ int main(int argc, char **argv)
 	if (argc != 2)
 	{
 		fprintf(stderr, "Usage: elf_head elf_filename\n");
-		return (98);
+		exit(98);
 	}
 
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 	{
 		fprintf(stderr, "Error opening file %s\n", argv[1]);
-		return (98);
+		exit(98);
 	}
 	if (read(fd, &header, sizeof(header)) != sizeof(header))
 	{
 		fprintf(stderr, "Error reading ELF header from file %s\n", argv[1]);
-		return (98);
+		exit(98);
 	}
 	print_elf_head(&header);
 	close(fd);
