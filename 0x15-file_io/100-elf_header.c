@@ -9,7 +9,6 @@
 * @header: pointer to the header
 */
 
-void print_elf_head(Elf64_Ehdr *header);
 void print_elf_head(Elf64_Ehdr *header)
 {
 	int i;
