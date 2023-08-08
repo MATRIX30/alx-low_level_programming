@@ -8,6 +8,8 @@
 * print_elf_head - function to print head of elf file
 * @header: pointer to the header
 */
+
+void print_elf_head(Elf64_Ehdr *header);
 void print_elf_head(Elf64_Ehdr *header)
 {
 	int i;
