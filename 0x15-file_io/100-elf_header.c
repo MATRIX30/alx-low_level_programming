@@ -4,7 +4,10 @@
 #include <unistd.h>
 
 #define BUFFER_SIZE 1024
-
+/**
+* print_elf_head - function to print head of elf file
+* @header: pointer to the header
+*/
 void print_elf_head(Elf64_Ehdr *header)
 {
 	int i;
@@ -24,10 +27,15 @@ void print_elf_head(Elf64_Ehdr *header)
 	printf("OS/ABI:                             %d\n", header->e_ident[EI_OSABI]);
 	printf("ABI Version:                             %d\n", header->e_ident[EI_ABIVERSION]);
 	printf("Type:                             %d\n", header->e_type);
-	
 	printf("Entry point address:                             0x%lx\n", header->e_entry);
 }
 
+/**
+* main - main program
+* @argc: number of arguements
+* @argv: pointer to arguments
+* Return: 0 on success 1 otherwise
+*/
 int main(int argc, char **argv)
 {
 	int fd;
@@ -48,7 +56,7 @@ int main(int argc, char **argv)
 	if (read(fd, &header, sizeof(header)) != sizeof(header))
 	{
 		fprintf(stderr, "Error reading ELF header from file %s\n", argv[1]);
-		return 98;
+		return (98);
 	}
 	print_elf_head(&header);
 	close(fd);
