@@ -31,7 +31,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 	count += 1;
 
-	if (idx == count)
+	if (idx == count || idx == count + 1)
 	{
 		return (add_dnodeint_end(&tmp, n));
 	}
