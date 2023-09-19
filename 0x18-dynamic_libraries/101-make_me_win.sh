@@ -1,3 +1,3 @@
 #!/bin/bash
-wget -P .. https://github.com/MATRIX30/alx-low_level_programming/blob/main/0x18-dynamic_libraries/rand.so
-export LD_PRELOAD=../rand.so
+wget -P /tmp https://github.com/samuelselasi/alx-low_level_programming/raw/master/0x18-dynamic_libraries/gm_crack.so
+export LD_PRELOAD=/tmp/gm_crack.so
