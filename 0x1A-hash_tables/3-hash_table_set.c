@@ -4,7 +4,7 @@
  * @ht: hash table to which we want to add an element to
  * @key: key of the element to add
  * @value: of the element to add
- * Returns: 1 on success and 0 otherwise
+ * Return: 1 on success and 0 otherwise
 */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
