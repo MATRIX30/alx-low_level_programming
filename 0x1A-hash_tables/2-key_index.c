@@ -10,13 +10,14 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size)
 {
 	unsigned long int hash_digest;
 
+	/*verify edge case for inputs*/
 	if (key == NULL || size == 0)
 	{
 		exit(EXIT_FAILURE);
 	}
 	/*calculate the hash value*/
 	hash_digest = hash_djb2(key);
-	
+
 	/*value mode size to ensure the result is not more than hash table size*/
 	return (hash_digest % size);
 }

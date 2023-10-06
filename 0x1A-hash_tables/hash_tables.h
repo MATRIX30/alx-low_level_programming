@@ -1,6 +1,6 @@
 #ifndef HASH_TABLE_HEADER
 #define HASH_TABLE_HEADER
-/* importing of libraries*/
+/* importing of neccesary libraries*/
 #include <stdlib.h>
 #include <stdio.h>
 
