@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 /**
  * hash_table_set - functions that adds an element to a hash table
  * @ht: hash table to which we want to add an element to
@@ -44,9 +45,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 	/*verify if key already exist and update the value*/
-	while(insert_head)
+	while (insert_head)
 	{
-		if(strcmp(insert_head->key, key) == 0)
+		if (strcmp(insert_head->key, key) == 0)
 		{
 			insert_head->value = new_node->value;
 			return (1);
