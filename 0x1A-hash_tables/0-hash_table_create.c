@@ -29,7 +29,8 @@ hash_table_t *hash_table_create(unsigned long int size)
 	/*check if allocating memory for hash table array fails*/
 	if (new_hash_table->array == NULL)
 	{
-
+		
+		free(new_hash_table);
 		return (NULL);
 	}
 	/* loop through all positions of array and initialize them to NULL*/
