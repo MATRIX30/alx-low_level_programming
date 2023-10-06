@@ -24,8 +24,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	}
 	/* if it passed assign NULL to all the positions of the hash table*/
 	new_hash_table->size = size;
-	/*new_hash_table->array = (hash_node_t **) malloc(sizeof(hash_node_t *) * size);*/
-	new_hash_table->array = (hash_node_t **)calloc(size, sizeof(hash_node_t));
+	new_hash_table->array = (hash_node_t **) malloc(sizeof(hash_node_t *) * size);
 
 	/*check if allocating memory for hash table array fails*/
 	if (new_hash_table->array == NULL)
