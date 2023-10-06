@@ -13,6 +13,10 @@ int main(void)
 	hash_table_t *ht;
 
 	ht = hash_table_create(1024);
-	hash_table_set(ht, "betty", "cool");
+	printf("value returned: %d\n",hash_table_set(ht, "betty", "cool"));
+	printf("value returned: %d\n",hash_table_set(ht, "mentioner", "cool"));
+	printf("value returned: %d\n",hash_table_set(ht, "hetairas", "cool"));
+	printf("value returned: %d\n",hash_table_set(ht, "depravement", "cool"));
+	printf("value returned: %d\n",hash_table_set(ht, "depravement", "cool"));
 	return (EXIT_SUCCESS);
 }
