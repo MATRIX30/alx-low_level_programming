@@ -43,6 +43,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		ht->array[index] = new_node;
 		return (1);
 	}
+	/*verify if key already exist and update the value*/
+	while(insert_head)
+	{
+		if(strcmp(insert_head->key, key) == 0)
+		{
+			insert_head->value = new_node->value;
+			return (1);
+		}
+		insert_head = insert_head->next;
+	}
 	/* if insert position is not empty insert at head*/
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
