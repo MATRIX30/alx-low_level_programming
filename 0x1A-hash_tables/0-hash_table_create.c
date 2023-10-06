@@ -10,6 +10,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *new_hash_table = NULL;
 	unsigned long int i = 0;
+
 	if (size == 0)
 	{
 		return (NULL);
@@ -28,7 +29,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	/*check if allocating memory for hash table array fails*/
 	if (new_hash_table->array == NULL)
 	{
-		
+
 		return (NULL);
 	}
 	/* loop through all positions of array and initialize them to NULL*/
@@ -36,7 +37,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		new_hash_table->array[i] = NULL;
 	}
-	
+
 	/*return the created hash table*/
 	return (new_hash_table);
 }
