@@ -1,48 +1,30 @@
 #include "hash_tables.h"
 
 /**
- * node_delete - function to delete a node from a hash table
- * @node: node to delete
-*/
-void node_delete(hash_node_t *node)
-{
-	free(node->value);
-	free(node->value);
-	free(node->next);
-}
-/**
- * hash_table_delete - function to delete from a hash table
- * @ht: hash table to delete from
-*/
+ * hash_table_delete - delete table
+ * @ht: pointer to struct of hash table
+ *
+ * Description: free and delete hash table
+ * Return: na
+ */
 void hash_table_delete(hash_table_t *ht)
 {
-	unsigned long int i;
-	hash_node_t *current_node, *tmp;
+	unsigned int i = 0;
+	hash_node_t *ptr = NULL, *ahead = NULL;
 
-
-	/* Testing to see if ht  or its array is NULL*/
-	if (ht == NULL || ht->array == NULL)
+	while (i < ht->size)
 	{
-		return;
-	}
-
-	/*iterate over all the hash table values*/
-	for (i = 0; i < ht->size; i++)
-	{
-		/*if an entry is NULL continue to next entry*/
-		if (ht->array[i] == NULL)
+		ptr = ht->array[i];
+		while (ptr)
 		{
-			continue;
+			ahead = ptr->next;
+			free(ptr->value);
+			free(ptr->key);
+			free(ptr);
+			ptr = ahead;
 		}
-		/*if entry is not NULL print all Key:value in entry*/
-		current_node = ht->array[i];
-		while (current_node)
-		{
-			tmp = current_node;
-			current_node = current_node->next;
-			/*deleting a node*/
-			node_delete(tmp);
-		}
+		i++;
 	}
-
+	free(ht->array);
+	free(ht);
 }
