@@ -1,6 +1,6 @@
 # uses gcc to compile all .c files to an executable school
 CC = gcc 
-SRC = $(wildcard *.c)
+SRC = main.c school.c
 # all: school
 all : $(SRC)
 	$(CC) $(SRC) -o school
