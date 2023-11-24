@@ -1,30 +1,50 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - Deletes a hash table.
- * @ht: A pointer to a hash table.
- */
+ * node_delete - function to delete a node from a hash table
+ * @node: node to delete
+*/
+void node_delete(hash_node_t *node)
+{
+	free(node->value);
+	free(node->key);
+	
+}
+/**
+ * hash_table_delete - function to delete from a hash table
+ * @ht: hash table to delete from
+*/
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_table_t *head = ht;
-	hash_node_t *node, *tmp;
 	unsigned long int i;
+	hash_node_t *current_node, *tmp;
 
+
+	/* Testing to see if ht  or its array is NULL*/
+	if (ht == NULL || ht->array == NULL)
+	{
+		return;
+	}
+
+	/*iterate over all the hash table values*/
 	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[i] != NULL)
+		/*if an entry is NULL continue to next entry*/
+		if (ht->array[i] == NULL)
 		{
-			node = ht->array[i];
-			while (node != NULL)
-			{
-				tmp = node->next;
-				free(node->key);
-				free(node->value);
-				free(node);
-				node = tmp;
-			}
+			continue;
 		}
+		/*if entry is not NULL free the entire chain*/
+		current_node = ht->array[i];
+		while (current_node)
+		{
+			tmp = current_node;
+			current_node = current_node->next;
+			/*deleting a node*/
+			node_delete(tmp);
+		}
+		free(ht->array);
+		free(ht);
 	}
-	free(head->array);
-	free(head);
+
 }
