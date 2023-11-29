@@ -6,20 +6,20 @@ RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 %.o: %.c m.h
-       ${CC} ${CFLAGS} -c -o $@ $<
+	${CC} ${CFLAGS} -c -o $@ $<
 
 all: ${OBJ}
-       ${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+	${CC} ${CFLAGS} ${OBJ} -o ${NAME}
 
 .PHONY: clean oclean fclean re
 clean:
-       ${RM} *~ ${NAME}
+	${RM} *~ ${NAME}
 
 oclean:
-       ${RM} ${OBJ}
+	${RM} ${OBJ}
 
 fclean:
-       ${RM} *~ ${NAME}
-       ${RM} ${OBJ}
+	${RM} *~ ${NAME}
+	${RM} ${OBJ}
 
 re: oclean all
