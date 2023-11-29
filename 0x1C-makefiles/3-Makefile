@@ -5,20 +5,20 @@ NAME = school
 RM = rm -f
 
 %.o: %.c m.h
-       ${CC} -c -o $@ $<
+	${CC} -c -o $@ $<
 
 all: ${OBJ}
-       ${CC} ${OBJ} -o ${NAME}
+	${CC} ${OBJ} -o ${NAME}
 
 .PHONY: clean oclean fclean re
 clean:
-       ${RM} *~ ${NAME}
+	${RM} *~ ${NAME}
 
 oclean:
-       ${RM} ${OBJ}
+	${RM} ${OBJ}
 
 fclean:
-       ${RM} *~ ${NAME}
-       ${RM} ${OBJ}
+	${RM} *~ ${NAME}
+	${RM} ${OBJ}
 
 re: oclean all
