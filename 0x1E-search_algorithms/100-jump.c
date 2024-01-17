@@ -27,7 +27,7 @@ int jump_search(int *array, size_t size, int value)
 		stop = stop + jump;
 
 
-		printf("value checked array[%ld] = [%d]\n", start, array[start]);
+		printf("Value checked array[%ld] = [%d]\n", start, array[start]);
 		if (array[stop] >= value)
 		{
 			/* perform linear search */
@@ -37,7 +37,7 @@ int jump_search(int *array, size_t size, int value)
 			while (start <= stop)
 			{
 				/*printf("Start: %ld-- stop: %ld\n",start, stop); */
-				printf("value checked array[%ld] = [%d]\n", start, array[start]);
+				printf("Value checked array[%ld] = [%d]\n", start, array[start]);
 				if (array[start] == value)
 				{
 
@@ -54,7 +54,7 @@ int jump_search(int *array, size_t size, int value)
 		while (start < size)
 		{
 			/*printf("Start: %ld-- stop: %ld\n",start, stop); */
-			printf("value checked array[%ld] = [%d]\n", start, array[start]);
+			printf("Value checked array[%ld] = [%d]\n", start, array[start]);
 			if (array[start] == value)
 			{
 
