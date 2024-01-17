@@ -7,61 +7,32 @@
  * @value: the value to be searched
  * Return: index of first element if found -1  otherwise
 */
-int jump_search(int *array, size_t size, int value);
 int jump_search(int *array, size_t size, int value)
 {
-	size_t start, stop;
-	int jump;
+	size_t jump = (int)sqrt(size);
+	size_t prev = 0;
+	size_t i;
 
 	if (array == NULL)
-	{
 		return (-1);
+
+	while (array[prev] < value)
+	{
+		printf("Value checked array[%ld] = [%d]\n", prev, array[prev]);
+
+		if (prev + jump < size)
+			prev += jump;
+		else
+			break;
 	}
 
-	jump = (int)sqrt(size);
-	stop = 0;
+	printf("Value found between indexes [%ld] and [%ld]\n", prev - jump, prev);
 
-	while (stop < size)
+	for (i = prev - jump; i <= prev && i < size; i++)
 	{
-		start = stop;
-		stop = stop + jump;
-
-
-		printf("Value checked array[%ld] = [%d]\n", start, array[start]);
-		if (array[stop] >= value)
-		{
-			/* perform linear search */
-
-
-			printf("Value found between indexes [%ld] and [%ld]\n", start, stop);
-			while (start <= stop)
-			{
-				/*printf("Start: %ld-- stop: %ld\n",start, stop); */
-				printf("Value checked array[%ld] = [%d]\n", start, array[start]);
-				if (array[start] == value)
-				{
-
-					return (start);
-				}
-				start = start + 1;
-			}
-			return (-1);
-		}
-	}
-	if (stop - size > 0)
-	{
-		printf("Value found between indexes [%ld] and [%ld]\n", start, stop);
-		while (start < size)
-		{
-			/*printf("Start: %ld-- stop: %ld\n",start, stop); */
-			printf("Value checked array[%ld] = [%d]\n", start, array[start]);
-			if (array[start] == value)
-			{
-
-				return (start);
-			}
-			start = start + 1;
-		}
+		printf("Value checked array[%ld] = [%d]\n", i, array[i]);
+		if (array[i] == value)
+			return (i);
 	}
 	return (-1);
 }
